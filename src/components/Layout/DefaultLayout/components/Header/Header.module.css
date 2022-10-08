@@ -1,0 +1,79 @@
+.header {
+	background: #ccc;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 152px;
+}
+
+.page-list li {
+	display: inline-block;
+}
+
+.page-list li:hover h6 {
+	color: var(--thirdary-color);
+	cursor: pointer;
+}
+
+.page-list li.page-link + li.page-link {
+	margin-left: 25px;
+}
+
+.box-list {
+	position: absolute ;
+	display: none;
+	padding-top: 15px;
+}
+
+.child-page-list {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+	border-radius: 8px;
+	padding: 24px 16px;
+	
+	min-width: max-content;
+	width: 150px;
+}
+
+.parent-page {
+	margin-right: 28px;
+	position: relative;
+}
+
+.parent-page::after {
+	content: "";
+	width: 5px;
+	height: 5px;
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	position: absolute;
+	right: -26px;
+	top: 50%;
+	transform: translateY(-74%) rotate(45deg);
+	pointer-events: none;
+}
+
+.parent-page:hover > .box-list {
+	display: block;
+}
+
+.page-list .child-page {
+	display: block;
+}
+
+.child-page a{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+.child-page:hover  a {
+	color: var(--thirdary-color	)
+}
+
+.child-page + .child-page {
+	margin-top: 16px;
+}
